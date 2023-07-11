@@ -16,7 +16,8 @@ async function fetchData(urlApi) {
     const data = await response.json();
     return data;
 }
-
+//Haciendo pruebas
+//Esta funcion anonima se auto llama(async ()=>{})();)
 (async () => {
     try {
         const videos = await fetchData(API);
@@ -25,7 +26,7 @@ async function fetchData(urlApi) {
         .map(
             (video) => `
           <a href="https://youtube.com/watch?v=${video.id.videoId}" target="_blank">
-    <div class="group relative">
+      <div class="group relative">
         <div
           class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
           <img src="${video.snippet.thumbnails.high.url}" alt="${video.snippet.description}" class="w-full">
