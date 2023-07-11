@@ -16,7 +16,7 @@ async function fetchData(urlApi) {
     const data = await response.json();
     return data;
 }
-
+//Haciendo pruebas
 //Esta funcion anonima se auto llama(async ()=>{})();)
 (async () => {
     try {
